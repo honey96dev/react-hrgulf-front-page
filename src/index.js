@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import * as serviceWorker from 'core/serviceWorker';
+import Loading from "./components/Loading";
+import App from 'pages/App';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+import "bootstrap-css-only/css/bootstrap.css";
+import "@fortawesome/fontawesome-pro/css/all.css";
+import 'assets/index.scss';
+
+
+ReactDOM.render(
+  <Suspense fallback={<Loading/>}>
+    <App/>
+  </Suspense>,
+  document.getElementById("root")
+);
+
 serviceWorker.unregister();
