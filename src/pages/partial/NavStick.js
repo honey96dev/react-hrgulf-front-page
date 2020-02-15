@@ -2,8 +2,10 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import {Link} from "react-router-dom";
 
+import routes from "core/routes";
+import images from "core/images";
+
 import "./NavStick.scss";
-import routes from "../../core/routes";
 
 export default () => {
   const {t} = useTranslation();
@@ -32,8 +34,9 @@ export default () => {
           </div>
           <div className={`elite-sec-${t("CODE")} elite-sec text-center`}>
             <a href={routes.redirect.eliteResourceCenter} target="_blank">
-              <p>{t("REDIRECT.ELITE_RESOURCES_CENTER_1")}</p>
-              {t("CODE") && <p>{t("REDIRECT.ELITE_RESOURCES_CENTER_2")}</p>}
+              {/*<p>{t("REDIRECT.ELITE_RESOURCES_CENTER_1")}</p>*/}
+              {/*{t("CODE") && <p>{t("REDIRECT.ELITE_RESOURCES_CENTER_2")}</p>}*/}
+              <img src={images.erc}/>
             </a>
           </div>
           <div className="recruitment-sec text-center">
