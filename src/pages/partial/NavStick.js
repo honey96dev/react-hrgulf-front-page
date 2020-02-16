@@ -36,7 +36,7 @@ export default () => {
             <a href={routes.redirect.eliteResourceCenter} target="_blank">
               {/*<p>{t("REDIRECT.ELITE_RESOURCES_CENTER_1")}</p>*/}
               {/*{t("CODE") && <p>{t("REDIRECT.ELITE_RESOURCES_CENTER_2")}</p>}*/}
-              <img src={images.erc}/>
+              <img src={t("CODE") === "en" ? images.ercEn : images.ercAr}/>
             </a>
           </div>
           <div className="recruitment-sec text-center">
